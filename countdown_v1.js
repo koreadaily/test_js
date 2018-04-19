@@ -53,7 +53,7 @@
             return Math.abs(a.getTime() - b.getTime())
         },
         w = function (a) {
-            var b = "HH:mm:ss";
+            var b = "ss";
             if (0 > a) throw Error("Negative milliseconds, please provide a positive value.");
             var c = 0,
                 g = 0,
@@ -66,11 +66,11 @@
             r.test(b) && (m = Math.floor(a / 1E3), a -= 1E3 * m);
             t.test(b) && (A = a);
              var temp=b.replace(r,
-                "<span class='dt-seconds'>" + v(m.toString()) + "</span>").replace("HH:mm:", "");
+                "<span class='dt-seconds'>" + v(m.toString()) + "</span>");
              return b = parseInt(temp).toString();
         },
         v = function (a) {
-            return 1 < a.length ? a : "0" + a
+            return 1 < a.length ? a : "" + a
         };
     var x = function () { };
     goog.inherits(x, HTMLElement);
