@@ -65,9 +65,9 @@
             q.test(b) && (l = Math.floor(a / 6E4), a -= 6E4 * l);
             r.test(b) && (m = Math.floor(a / 1E3), a -= 1E3 * m);
             t.test(b) && (A = a);
-             var temp=b.replace(r,
+            return b = b.replace(r,
                 "<span class='dt-seconds'>" + v(m.toString()) + "</span>");
-             return b = parseInt(temp).toString();
+             
         },
         v = function (a) {
             return 1 < a.length ? a : "" + a
