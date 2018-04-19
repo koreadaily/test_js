@@ -65,8 +65,9 @@
             q.test(b) && (l = Math.floor(a / 6E4), a -= 6E4 * l);
             r.test(b) && (m = Math.floor(a / 1E3), a -= 1E3 * m);
             t.test(b) && (A = a);
-            return b = b.replace(b.replace(r,
-                "<span class='dt-seconds'>" + v(m.toString()) + "</span>").replace(n, "").replace(p, "").replace(q, "").replace(t, ""),"")
+             var temp=b.replace(r,
+                "<span class='dt-seconds'>" + v(m.toString()) + "</span>").replace("HH:mm:", "");
+             return b = parseInt(temp).toString();
         },
         v = function (a) {
             return 1 < a.length ? a : "0" + a
